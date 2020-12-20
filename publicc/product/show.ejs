@@ -1,0 +1,13 @@
+<% layout('product/boilerplate') %>   
+    <!-- <h3>This is Show ejs</h3>s -->
+    <h4>product : <%= prod.name %>  </h2>
+    <li> price : <%= prod.price %> </li>
+    <li> category : <%= prod.category %> </li>
+    <a href="/" class="btn btn-primary">go back to all products </a>
+    <br> <br>
+    <a href="/product/<%= prod._id %>/edit" class="btn">edit</a>
+    <!-- <br> -->
+    <form action="/product/<%= prod._id %>?_method=DELETE" method="POST">
+    <button class="btn btn-danger">delete</button>
+    </form>
+

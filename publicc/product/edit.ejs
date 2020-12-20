@@ -1,0 +1,31 @@
+<% layout('product/boilerplate') %> 
+    <h3>HERE we'll edit - <%= prod.name %> </h3>
+
+    <form action="/product/<%= prod._id %>" method="POST">
+        <input type="text" name="name" value="<%= prod.name %>">
+        <input type="number" name="price" value="<%= prod.price %>">
+        
+        <div class="input-field col s12">
+        <select name="category" id="">
+            
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+            
+        </select>
+        </div>
+        <button class="btn btn-primary">SUBMIT</button>
+    </form>
+    
+    <br>
+    <a href="/product/<%= prod._id %> ">GO BACK</a>
+ 
+    <a href="/ " class="btn btn-primary">ALL PRODUCTS</a>
+
+    <script>
+            
+            $(document).ready(function(){
+                $('select').formSelect();
+            });
+
+    </script>

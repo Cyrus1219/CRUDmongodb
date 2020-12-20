@@ -1,0 +1,30 @@
+<% layout('product/boilerplate') %> 
+    <form action="/product/add" method="POST">
+
+        <!-- <label for="name"></label> -->
+        <input type="text" id="name" name="name" placeholder="Name of item">
+        <br>
+        <input type="number" name="price" placeholder="Price of item">
+        <br>
+        <select name="category" >
+            
+            <option value="fruit" selected>Fruits</option>
+            <option value="vegetable">Vegetable</option>
+            <option value="dairy">Dairy</option>
+            
+        </select>
+        <br>
+        <button>SUBMIT</button>
+    </form>
+    
+    <br>
+    <br>
+    <a href="/ " class="btn btn-primary">GO BACK TO ALL PRODUCTS !</a>
+
+    <script>
+            
+        $(document).ready(function(){
+            $('select').formSelect();
+        });
+
+</script>

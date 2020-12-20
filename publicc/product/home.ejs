@@ -1,0 +1,9 @@
+<% layout('product/boilerplate') %> 
+
+    <h3>This is home.ejs !</h3>
+    <a href="product/add" class="btn btn-primary">ADD PRODUCT !</a>
+    <ul class="collection">
+        <% for(let pro of prods ){ %>
+            <li > <a href="/product/<%= pro._id %>" class="collection-item"><%= pro.name %>  </a> </li>
+        <% } %> 
+    </ul>
